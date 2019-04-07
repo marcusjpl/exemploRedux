@@ -1,34 +1,28 @@
 import React, { Component } from 'react'
-import appActions from './appActions'
 import { connect } from 'react-redux'
 import Form from './Form';
 
 
-const FormConectado = connect(store => ({ nome: store.text }))(Form)
+const FormConectado = connect(store => ({ show: store.object }))(Form)
 
 class Etapa extends Component {
 
     constructor(props) {
         super(props)
-        this.state = {
-            show: {
-                nome: '',
-                local: '',
-            }
-        }
+        this.state = { }
     }
 
     render() {
         return (
             <div>
-                Nome:{this.props.nome}
+                Nome:{this.props.show.nome}
                 <br/>
-                Local:{this.state.show.local}
+                Local:{this.props.show.local}
                 <br/><br/><br/>
                 <FormConectado/>
             </div>
         )
     }
 }
-export default connect(store => ({ nome: store.nome }))(Etapa)
+export default connect(store => ({ show: store.show }))(Etapa)
 

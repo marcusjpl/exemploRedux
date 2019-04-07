@@ -1,4 +1,4 @@
-const initialState = { text: 'Este texto', nome: '' }
+const initialState = { text: 'Este texto', nome: '', show: {} }
 
 export default (state = initialState, action) => {
     switch (action.type) {
@@ -6,6 +6,8 @@ export default (state = initialState, action) => {
             return { ...state, text: action.payload }
         case 'SET_NOME':
             return { ...state, nome: action.payload }
+        case 'SET_SHOW':
+            return { ...state, show: action.payload }
         default:
             return state
     }
