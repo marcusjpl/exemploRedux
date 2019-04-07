@@ -11,8 +11,11 @@ class App extends Component {
   render() {
       return (
           <Fragment>
-              <h1>{this.props.text}</h1>
+              <h2>Exemplo com String</h2>
+              <h2>{this.props.text}</h2>
               <FilhoConectado/>
+               <h2>-----------------------------------------------</h2>
+               <h2>Exemplo com Objeto</h2>
               <Etapa/>
           </Fragment>
       )

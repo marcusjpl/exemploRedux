@@ -15,9 +15,12 @@ class Etapa extends Component {
     render() {
         return (
             <div>
-                Nome:{this.props.show.nome}
-                <br/>
-                Local:{this.props.show.local}
+                <label>Componente Pai</label>
+                <div style={{backgroundColor: 'aliceblue'}}>
+                    Nome:{this.props.show.nome}
+                    <br/>
+                    Local:{this.props.show.local}
+                </div>
                 <br/><br/><br/>
                 <FormConectado/>
             </div>

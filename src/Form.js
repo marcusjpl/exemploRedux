@@ -34,16 +34,19 @@ export default class Form extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        Name: <input type="text" name="nome" value={this.state.nome} onChange={this.handleChange} />
-                    </label>
+            <label>Componente Filho</label>
+                <div style={{backgroundColor: 'cornflowerblue'}}>
+                    <form onSubmit={this.handleSubmit}>
+                        <label>
+                            Name: <input type="text" name="nome" value={this.state.nome} onChange={this.handleChange} />
+                        </label>
 
-                    <label>
-                        Local: <input type="text" name="local" value={this.state.local} onChange={this.handleChange} />
-                    </label>
-                    <input type="submit" value="Submit" />
-                </form>
+                        <label>
+                            Local: <input type="text" name="local" value={this.state.local} onChange={this.handleChange} />
+                        </label>
+                        <input type="submit" value="Enviar" />
+                    </form>
+                </div>
             </div>
         )
     }
